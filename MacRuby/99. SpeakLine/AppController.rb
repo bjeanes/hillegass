@@ -42,4 +42,27 @@ class AppController
     @stopButton.enabled = false
     @startButton.enabled = true
   end
+  
+  def tableViewSelectionDidChange(notification)
+    row = @tableView.selectedRow
+    return if row == -1
+    
+    @speechSynth.voice = @voiceList[row]
+    puts "new voice = #{niceVoiceNameForVoice(@speechSynth.voice)}"
+  end
+  
+  # Datasource Methods:
+  def numberOfRowsInTableView(tv)
+    @voiceList.count
+  end
+  
+  def tableView(tv, objectValueForTableColumn: column, row: row)
+    voice = @voiceList[row]
+    niceVoiceNameForVoice(voice)
+  end
+  
+  private
+  def niceVoiceNameForVoice(voice)
+    NSSpeechSynthesizer.attributesForVoice(voice)[NSVoiceName]
+  end
 end
