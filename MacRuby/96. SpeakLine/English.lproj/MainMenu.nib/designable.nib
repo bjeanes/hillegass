@@ -832,7 +832,7 @@
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="521042725">
-								<int key="NSCellFlags">67239424</int>
+								<int key="NSCellFlags">604110336</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Stop</string>
 								<reference key="NSSupport" ref="906261686"/>
