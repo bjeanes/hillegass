@@ -17,6 +17,13 @@ class AppController
     self
   end
   
+  def awakeFromNib
+    defaultVoice = NSSpeechSynthesizer.defaultVoice
+    defaultRow = @voiceList.indexOfObject(defaultVoice)
+    @tableView.selectRow(defaultRow, byExtendingSelection: false)
+    @tableView.scrollRowToVisible(defaultRow)
+  end
+  
   def sayIt(sender)
     string = @textField.stringValue
     
