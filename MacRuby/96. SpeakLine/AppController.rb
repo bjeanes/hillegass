@@ -12,6 +12,7 @@ class AppController
   def init
     super
     @speechSynth = NSSpeechSynthesizer.alloc.initWithVoice(nil)
+    @speechSynth.delegate = self
     self
   end
   
