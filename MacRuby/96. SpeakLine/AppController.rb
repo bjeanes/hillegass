@@ -32,4 +32,9 @@ class AppController
     puts "stopping"
     @speechSynth.stopSpeaking
   end
+  
+  # Delegates:
+  def speechSynthesizer(sender, didFinishSpeaking:complete)
+    puts "complete = #{complete}"
+  end
 end
