@@ -70,6 +70,12 @@ class AppController
     niceVoiceNameForVoice(voice)
   end
   
+  def respondsToSelector(aSelector)
+    puts "Am being checked for selector: #{aSelector}"
+  
+    super(aSelector)
+  end
+  
   private
   def niceVoiceNameForVoice(voice)
     NSSpeechSynthesizer.attributesForVoice(voice)[NSVoiceName]
