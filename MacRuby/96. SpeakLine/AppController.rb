@@ -7,7 +7,7 @@
 #
 
 class AppController
-  attr_accessor :textField, :speechSynth
+  attr_accessor :textField, :speechSynth, :startButton, :stopButton
   
   def init
     super
