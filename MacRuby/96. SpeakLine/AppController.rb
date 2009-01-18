@@ -26,6 +26,8 @@ class AppController
     
     @speechSynth.startSpeakingString(string)
     puts "Have started to say: #{string}"
+    @stopButton.enabled = true
+    @startButton.enabled = false
   end
   
   def stopIt(sender)
@@ -36,5 +38,7 @@ class AppController
   # Delegates:
   def speechSynthesizer(sender, didFinishSpeaking:complete)
     puts "complete = #{complete}"
+    @stopButton.enabled = false
+    @startButton.enabled = true
   end
 end
