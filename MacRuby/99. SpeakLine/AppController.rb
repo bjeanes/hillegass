@@ -29,6 +29,7 @@ class AppController
     puts "Have started to say: #{string}"
     @stopButton.enabled = true
     @startButton.enabled = false
+    @tableView.enabled = false
   end
   
   def stopIt(sender)
@@ -41,6 +42,7 @@ class AppController
     puts "complete = #{complete}"
     @stopButton.enabled = false
     @startButton.enabled = true
+    @tableView.enabled = true
   end
   
   def tableViewSelectionDidChange(notification)
