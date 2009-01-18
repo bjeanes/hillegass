@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+._*
+build/*
+pkg/*
+.svn
+*.pbxuser
+*.perspective*
+*.move1v3
+*~
+log/*
+tmp/**/*
