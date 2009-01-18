@@ -28,4 +28,8 @@ class AppController
     @items[row]
   end 
   
+  def tableView(aTableView, setObjectValue: anObject, forTableColumn: aTableColumn, row: rowIndex)
+    @items[rowIndex] = anObject.to_s
+    @toDoTableView.reloadData
+  end
 end
