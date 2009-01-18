@@ -7,12 +7,13 @@
 #
 
 class AppController
-  attr_accessor :textField, :speechSynth, :startButton, :stopButton
+  attr_accessor :textField, :startButton, :stopButton, :tableView
   
   def init
     super
     @speechSynth = NSSpeechSynthesizer.alloc.initWithVoice(nil)
     @speechSynth.delegate = self
+    @voiceList = NSSpeechSynthesizer.availableVoices
     self
   end
   
