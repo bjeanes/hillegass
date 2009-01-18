@@ -28,8 +28,7 @@ class AppController
     string = @textField.stringValue
     
     if string.empty?
-      puts "string from #{textField} is of zero-length"
-      return
+      string = @textField.cell.placeholderString
     end
     
     @speechSynth.startSpeakingString(string)
