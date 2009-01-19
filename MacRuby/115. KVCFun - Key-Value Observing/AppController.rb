@@ -10,9 +10,7 @@ class AppController
   
   def init
     super
-    self.setValue(5, forKey: 'fido')
-    n = self.valueForKey 'fido'
-    puts "fido = #{n}"
+    @fido = NSNumber.numberWithFloat(5.0)
     self
   end
   
